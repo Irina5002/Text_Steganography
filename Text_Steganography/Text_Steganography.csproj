@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C8609BD-47F8-4EBC-BD76-57E7C0DE5A59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Text_Steganography</RootNamespace>
+    <AssemblyName>Text_Steganography</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="FormMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainMenu.Designer.cs">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLetterExtr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLetterExtr.Designer.cs">
+      <DependentUpon>FormLetterExtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLetterHide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLetterHide.Designer.cs">
+      <DependentUpon>FormLetterHide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSpaceExtr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSpaceExtr.Designer.cs">
+      <DependentUpon>FormSpaceExtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSpaceHide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSpaceHide.Designer.cs">
+      <DependentUpon>FormSpaceHide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStegano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStegano.Designer.cs">
+      <DependentUpon>FormStegano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTexts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTexts.Designer.cs">
+      <DependentUpon>FormTexts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextForms\FormTextAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextForms\FormTextAdd.Designer.cs">
+      <DependentUpon>FormTextAdd.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMainMenu.resx">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLetterExtr.resx">
+      <DependentUpon>FormLetterExtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLetterHide.resx">
+      <DependentUpon>FormLetterHide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSpaceExtr.resx">
+      <DependentUpon>FormSpaceExtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSpaceHide.resx">
+      <DependentUpon>FormSpaceHide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStegano.resx">
+      <DependentUpon>FormStegano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTexts.resx">
+      <DependentUpon>FormTexts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TextForms\FormTextAdd.resx">
+      <DependentUpon>FormTextAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-замок-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-текст-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-информация-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-разблокировать-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-замок-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-перезагрузка-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-скачать-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-лупа-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-информация-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-обновление-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ластик-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-открытая-книга-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
